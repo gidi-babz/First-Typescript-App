@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	body {
+		@apply font-sans text-primary relative;
+	}
+
+	nav {
+		@apply flex justify-between items-center h-24 w-full px-8 shadow-md fixed top-0 left-0;
+	}
+
+	main {
+		@apply h-[120vh];
+	}
+}
+
+@layer components {
+	.nav-btn {
+		@apply bg-white px-5 py-2 border-[1px] border-blue-500 rounded-3xl text-blue-500 text-sm font-semibold hover:bg-blue-500 hover:text-white transition cursor-pointer;
+	}
+
+	.nav-link {
+		@apply font-semibold text-gray-400 hover:text-blue-500 hover:border-b-blue-500 hover:border-b-2 cursor-pointer transition;
+	}
+}
